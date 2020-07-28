@@ -1,3 +1,6 @@
+body{
+    font-family: 'Raleway', sans-serif;
+}
 a{
     color: green;
 }
@@ -100,9 +103,6 @@ li{
     color: #ffbf00;
 }
 
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-
 .slideshow-container {
   position: relative;
 }
@@ -176,6 +176,15 @@ q {
 .list-unstyled li a{
     color: #fff;
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -274,5 +283,129 @@ q {
     text-align: center;
     margin-top: 8%;
     margin-bottom: -15%;
-    color: #fcfcfc;
+    color: #37a000;
 }
+
+
+
+
+
+
+
+
+
+/*---------------------LOGIN---------------*/
+
+/* Admin Login Page Start */
+.login-page{
+    box-shadow: 0px 1px 3px #333;
+    margin-top: 120px;
+    margin-bottom: 120px;
+    padding: 0px;
+}
+.login-form {
+    background-color: #f2f2f2;
+    padding: 40px;
+}
+.admin-logo{
+    display: block;
+    margin: 0 auto;
+}
+.login-form h3{
+    font-size: 1.55rem;
+    text-align: center;
+    padding: 15px 0px 25px;
+    color: #1e1e1e;
+    font-weight: 600;
+}
+.form-control:focus {
+    color: #1e1e1e;
+    background-color: #fff;
+    border-color: #f90;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgb(255, 153, 0);
+}
+.lg-btn {
+    border: 1px solid #37a000;
+    color: #fff;
+    font-weight: 600;
+    padding: 3px 60px;
+    display: block;
+    margin: 0 auto;
+    background-color: #37a000;
+    border-radius: 0px;
+    margin-top: 30px;
+}
+.lg-btn:hover{
+    background-color: #008329;
+    color: #fff;
+    border: 1px solid #008329;
+}
+.btn-outline-primary:not([disabled]):not(.disabled).active, 
+.btn-outline-primary:not([disabled]):not(.disabled):active, 
+.show>.btn-outline-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #008329;
+    border-color: #008329;
+    box-shadow: none;
+}
+
+.dropdown-toggle{
+	/*! border:1px solid #0099CC; */
+	border-radius: 20px;
+}
+
+.dropdown-toggle:hover{
+	/*border:1px solid #ff9c3c;*/
+	border-radius: 20px;
+}
+.dropdown-toggle:active{
+	/*border:1px solid #ff9c3c !important;*/
+	color: #ff9c3c;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .275rem 1.25rem;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #1e1e1e;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid #c7c5c5;
+    border-radius: 0px;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    font-weight: 600;
+}
+.form-control:focus {
+    color: #333;
+    background-color: #fff;
+    border-color: #c7c5c5;
+    outline: 0;
+    box-shadow: none;
+}
+.input-group-addon {
+    color: #008329; 
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0px;
+    padding: 6px;
+}
+.forget-password {
+    background-color: #e0dcdc;
+    padding: 20px 40px;
+    text-align: center;
+}
+.forget-password a{
+    color: #333;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: 0.4s;
+}
+.forget-password a:hover{
+    color: #37a000;
+    text-decoration: none;
+    font-weight: 500;
+}
+/* Admin Login Page End */

@@ -1,5 +1,5 @@
 <?php
-include_once 'template/header.php'
+include_once 'init.php';
 ?>
 
 	<!--HEADER OF THE SITE ENDS HERE-->
