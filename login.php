@@ -6,7 +6,7 @@ include_once 'template/header.php';
         <div class="row">
             <div class="col-lg-4 offset-lg-4 login-page">
                 <div class="login-form">
-                    <h3>Log in to Admin Panel</h3>
+                    <h3>Log in to E-Work</h3>
                     <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
                         <div class="form-group">
                             <div class="input-group">
