@@ -41,8 +41,8 @@
 									<img class="rounded-circle" src="layout/image/dp.jpg" alt="" width="40">
 									</a>
 									<div class="dropdown-menu profile-dropdown-menu" aria-labelledby="navbarDropdown">
-									<a class="dropdown-item" href="#">Edit profile</a>
-									<a class="dropdown-item" href="post.php">Post Job</a>
+									<a class="dropdown-item" href="members.php?do=Edit&id=<?php echo $_SESSION['ID']; ?>">Edit profile</a>
+									<a class="dropdown-item" href="members.php?do=Manage">Manage Member</a>
 									<a class="dropdown-item" href="#">Workstream</a>
 									<a class="dropdown-item" href="#">Freelancing Activity</a>
                                     <a class="dropdown-item" href="#">Buyer Activity</a>

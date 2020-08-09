@@ -1,15 +1,14 @@
 <?php
-include_once 'template/header.php';
 $noNavbar = '';
 $pageTitle = 'Login';
 session_start();
-
+//print_r($_SESSION);
 
 if (isset($_SESSION['username'])) {
 	header('location:dashboard.php');
 }
 
-include 'connect.php';
+include 'init.php';
 
 //check if user coming from HTTP request
 
@@ -20,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	//echo "<h3>Hello ".$username." "."Your Password Is '".$hasshedpass."'</h3>" ;
 
-	$statement = $con -> prepare("SELECT id, username, password FROM user WHERE username = ? AND password = ? AND groupid = 0 LIMIT 1");
+	$statement = $con -> prepare("SELECT id, username, password FROM admin WHERE username = ? AND password = ? AND groupid = 1 LIMIT 1");
 	$statement -> execute(array($username,$hasshedpass));
     $row = $statement -> fetch();
 	$count = $statement -> rowCount();
@@ -35,16 +34,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
-<div class="container">
+
+
+    <div class="container">
         <div class="row">
             <div class="col-lg-4 offset-lg-4 login-page">
                 <div class="login-form">
-                    <h3>Log in to E-Work</h3>
+                    <!--img src="<?php echo $img . 'logo.png' ?>" class="img-fluid admin-logo"-->
+                    <h3>Log in to Admin Panel</h3>
                     <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
                         <div class="form-group">
                             <div class="input-group">
                                 <div class="input-group-addon">
-                                <i class="fas fa-user"></i>
+                                    <i class="fas fa-user"></i>
                                 </div>
                                 <input type="text" name="username" class="form-control" placeholder="Username" autocomplete="off" required="required" />
                             </div>
@@ -66,13 +68,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
                 <!-- Forget Password Option -->
                 <div class="forget-password">
-                    <a href="register.php" class="fgot-pass">Need An Account?</a>
+                    <a href="#" class="fgot-pass">Forget Your Password?</a>
                 </div>
 
             </div>
         </div>
     </div>
 
+
+
 <?php
-include_once 'template/footer.php';
+include $temp.'footer.php';
 ?>
+

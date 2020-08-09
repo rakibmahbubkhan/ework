@@ -1,4 +1,6 @@
 <?php
+
+include 'connect.php';
 $temp = 'template/';
 $css = 'layout/css/';
 $js = 'layout/js/';

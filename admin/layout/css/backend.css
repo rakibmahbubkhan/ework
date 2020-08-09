@@ -1,0 +1,483 @@
+body{
+    font-family: "Gotham SSm",Helvetica,Arial,sans-serif !important;
+    background-color: #f2f2f2;
+}
+.no-padding{
+    padding: 0px;
+}
+label{
+    white-space: nowrap;
+}
+.heading{
+    font-size: 30px;
+    font-weight: 500;
+    color: #1e1e1e;
+    padding-bottom: 25px;
+    text-align: center;
+}
+/* Admin Login Page Start */
+.login-page{
+    box-shadow: 0px 1px 3px #333;
+    margin-top: 140px;
+    padding: 0px;
+}
+.login-form {
+    background-color: #fff;
+    padding: 40px;
+}
+.admin-logo{
+    display: block;
+    margin: 0 auto;
+}
+.login-form h3{
+    font-size: 1.55rem;
+    text-align: center;
+    padding: 15px 0px 25px;
+    color: #1e1e1e;
+    font-weight: 600;
+}
+.form-control:focus {
+    color: #1e1e1e;
+    background-color: #fff;
+    border-color: #f90;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgb(255, 153, 0);
+}
+.lg-btn {
+    border: 1px solid #37a000;
+    color: #fff;
+    font-weight: 600;
+    padding: 3px 60px;
+    display: block;
+    margin: 0 auto;
+    background-color: #37a000;
+    border-radius: 0px;
+    margin-top: 30px;
+}
+.lg-btn:hover{
+    background-color: #008329;
+    color: #fff;
+    border: 1px solid #008329;
+}
+.btn-outline-primary:not([disabled]):not(.disabled).active, 
+.btn-outline-primary:not([disabled]):not(.disabled):active, 
+.show>.btn-outline-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #008329;
+    border-color: #008329;
+    box-shadow: none;
+}
+
+.dropdown-toggle{
+	/*! border:1px solid #0099CC; */
+	border-radius: 20px;
+}
+
+.dropdown-toggle:hover{
+	/*border:1px solid #ff9c3c;*/
+	border-radius: 20px;
+}
+.dropdown-toggle:active{
+	/*border:1px solid #ff9c3c !important;*/
+	color: #ff9c3c;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .275rem 1.25rem;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #1e1e1e;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid #c7c5c5;
+    border-radius: 0px;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    font-weight: 600;
+}
+.form-control:focus {
+    color: #333;
+    background-color: #fff;
+    border-color: #c7c5c5;
+    outline: 0;
+    box-shadow: none;
+}
+.input-group-addon {
+    color: #008329; 
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0px;
+}
+.forget-password {
+    background-color: #e0dcdc;
+    padding: 20px 40px;
+    text-align: center;
+}
+.forget-password a{
+    color: #333;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: 0.4s;
+}
+.forget-password a:hover{
+    color: #37a000;
+    text-decoration: none;
+    font-weight: 500;
+}
+/* Admin Login Page End */
+
+
+/* Admin Dashboard CSS */
+.bg-light {
+    background-color: #fff !important;
+    border-bottom: 1px solid #f8f8f8;
+    box-shadow: 0px 0px 6px #333;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #37a000;
+    font-weight: 600;
+}
+.navbar-light .navbar-nav .nav-link:focus, 
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #297700;
+}
+.navbar-expand-lg 
+.navbar-nav 
+.dropdown-menu {
+    padding: 0px;
+    background-color: #e8e4f9;
+}
+.dropdown-menu {
+    top: 112%;
+    left: -60px;
+}
+.dropdown-item {
+    font-weight: 500;
+    color: #37a000;
+    background-color: #fff;
+}
+.dropdown-item:focus, 
+.dropdown-item:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #37a000;
+}
+
+/* Profle Edit Page */
+.edit-profile{
+    margin-top: 100px;
+    padding-top: 100px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px #333;
+    padding: 40px 40px 20px;
+}
+.edit-profile h1{
+    font-size: 30px;
+    font-weight: 500;
+    color: #1e1e1e;
+    padding-bottom: 25px;
+}
+.updt-btn {
+    border: 1px solid #37a000;
+    color: #fff;
+    font-weight: 600;
+    padding: 3px 60px;
+    display: block;
+    margin: 0 auto;
+    background-color: #37a000;
+    border-radius: 0px;
+}
+.updt-btn:hover{
+    background-color: #008329;
+    color: #fff;
+    border: 1px solid #008329;
+}
+.fa-lock{
+    padding: 0px 2.5px;
+}
+.second-row{
+    margin: 50px 0px;
+}
+.second-row .latest-users{
+    padding: 10px;
+}
+.latest .comment-box{
+    margin: 10px;
+}
+.latest .comment-box .member-n,
+.latest .comment-box .member-c{
+    float: left;
+}
+.latest .comment-box .member-n{
+    width: 80px;
+    text-align: center;
+    margin-right: 20px;
+    padding: 10px;
+}
+.latest .comment-box .member-c{
+    width: calc(100% - 100px);
+    background-color: #EFEFEF;
+    padding: 10px;
+    position: relative;
+}
+.latest .comment-box .member-c:before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: -41px;
+    top: 1px;
+    width: 0;
+    height: 0;
+    border-color: transparent #EFEFEF transparent transparent;
+    border-style: solid;
+    border-width: 21px;
+
+}
+/* Manage Member's Table Design */
+
+.main-table tr:first-child th{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+.main-table th{
+    vertical-align: middle;
+}
+
+.main-table td{
+    vertical-align: middle;
+    text-align: center;
+}
+
+/* Add Member's Page Design CSS Start */
+.add-member{
+    margin-top: 100px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px #333;
+    padding: 40px 40px 20px;
+}
+.add-member h1{
+    font-size: 30px;
+    font-weight: 500;
+    color: #1e1e1e;
+    padding-bottom: 25px;
+}
+.table td, .table th {
+    background-color: #fff;
+}
+.add-member-btn{
+    border: 1px solid #37a000;
+    color: #fff;
+    font-weight: 600;
+    padding: 3px 60px;
+    display: block;
+    background-color: #37a000;
+    border-radius: 0px;
+}
+/* Add Member's Page Design CSS End */
+
+
+/* Dashboard Design Start */
+.welcome-dashboard{
+    padding: 20px;
+    font-size: 36px;
+    color: #4ad004;
+    text-shadow: 1px 2px 3px #333;
+}
+.home-stats .stat{
+    background-color: #09aef1;
+    color: #fff;
+    font-weight: 700;
+    padding: 20px;
+}
+.home-stats .stat span{
+    display: block;
+    font-size: 30px;
+}
+.home-stats .pending{
+    background-color: #CC452A;
+    color: #fff;
+    font-weight: 700;
+    padding: 20px;
+}
+.home-stats .pending span{
+    display: block;
+    font-size: 30px;
+}
+.home-stats a{
+   color: #fff;
+    text-decoration: none;
+}
+.home-stats .pending a{
+    color: #fff;
+    text-decoration: none;
+}
+.home-stats .tot-items{
+    background-color: #E15B00;
+    color: #fff;
+    font-weight: 700;
+    padding: 20px;
+}
+.home-stats .tot-items span{
+    display: block;
+    font-size: 30px;
+}
+.home-stats .tot-comnts{
+    background-color: #9252B1;
+    color: #fff;
+    font-weight: 700;
+    padding: 20px;
+}
+.home-stats .tot-comnts span{
+    display: block;
+    font-size: 30px;  
+}
+.latest{
+    margin-top: 40px;
+}
+.dashboard-edit-btn{
+    background-color: #09aef1;
+    border: 1px solid #09aef1;
+}
+.latest-users li{
+    padding: 10px 20px;
+    overflow: hidden;
+}
+.latest-users li:nth-child(even){
+    background-color: #EEE;
+}
+.latest-users .dashboard-edit-btn{
+    padding: 3px 8px;
+}
+.dashboard-edit-btn:hover{
+    background-color: #4ad004;
+    border: 1px solid #4ad004;
+    box-shadow: 2px 3px 5px #333;
+}
+.dashboard-edit-btn a{
+    color: #fff;
+    text-decoration: none;
+}
+.first-card{
+    background-color: #09aef1;
+    color: #fff;
+    border: 1px solid #09aef1;
+}
+.second-card{
+    background-color: #E15B00;
+    color: #fff;
+    border: 1px solid #E15B00;
+}
+/* Dashboard Design End */
+
+.btn-info {
+    margin-left: 5px;
+}
+
+/* Manage Category Page Design Start */
+.add-category{
+    margin: 30px 0px;
+}
+.card-body {
+    padding: 0px;
+}
+.categories .cat{
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.categories .cat:hover{
+    background-color: #EEE;
+}
+.categories .cat:hover .hidden-buttons{
+    right: 10px;
+}
+.categories .cat .hidden-buttons{
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    position: absolute;
+    top: 10px;
+    right: -175px;
+}
+.categories .cat .hidden-buttons a{
+    margin-right: 5px;
+}
+.categories .cat h4{
+    margin: 0;
+    cursor: pointer;
+}
+.categories .cat .full-view p{
+    margin: 10px 0px;
+}
+.categories hr{
+    margin: 0px 0px;
+}
+.categories .option a{
+    color: #888;
+    text-decoration: none;
+}
+.categories .option span{
+    color: #888;
+    cursor: pointer;
+}
+.categories .option .active{
+    color: #F00;
+    font-weight: bold;
+}
+.categories .cat:last-of-type ~ hr{
+    display: none;
+}
+.categories .cat .visibility{
+    background: #d35400;
+    color: #fff;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+.categories .cat .commenting{
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+.categories .cat .advertising{
+    background-color: blue;
+    color: #fff;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+.cat-hr{
+    margin: 0px;
+}
+.categories .child-head{
+    margin: 10px 0 10px 40px;
+    font-weight: bold;
+    color: #46b5b5;
+}
+.categories .child-cats{
+    margin: 10px 0 10px 40px;
+}
+.categories .child-cats li{
+    margin-left: 20px;
+}
+.categories .child-cats li:before{
+    content: "- "; 
+}
+.show-delete{
+    color: red;
+    text-decoration: none;
+}
+.categories .show-delete{
+    color: #F00;
+    display: none;
+}
+/* Manage Category Page Design End */
+.avater-img{
+    width: 50px;
+    height: 50px;
+}
