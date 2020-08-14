@@ -1,12 +1,10 @@
 <?php
-
+ob_start("ob_gzhandler");
 session_start();
 if (isset($_SESSION['username'])) {
 	$pageTitle = 'Dashboard';
 	include 'init.php';
 
-	// $numUser =5;
-	// $latestUser = getLatest('*','user','id', $numUser);
 	?>
 
 	<!--HEADER OF THE SITE ENDS HERE-->
@@ -21,7 +19,7 @@ if (isset($_SESSION['username'])) {
 						<div class="col-lg-2">
 						</div>
 						<div class="col-lg-10">
-							<h1 class="cover_img_text">In-demand talent <br>
+							<h1 class="cover_img_text"><?php echo $row['username'];?>In-demand talent <br>
 							on demand</h1>
 							<h1 class="cover_img_text">ework is how</h1>
 							<h3 style="color: #fff;">Hire proven pros with confidence using the world’s largest, <br>remote talent platform.</h3>
@@ -345,4 +343,6 @@ if (isset($_SESSION['username'])) {
 	header('location:index.php');
 	exit();
 }
+
+ob_end_flush();
 ?>

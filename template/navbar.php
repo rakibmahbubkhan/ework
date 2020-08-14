@@ -1,4 +1,18 @@
 <!--HEADER OF THE SITE STARTS HERE-->
+<?php
+$query ='';
+            if (isset($GET['page']) && $_GET['page'] == 'Pending' ){
+                $query = 'AND regstatus = 0';
+            }
+
+$statement = $con->prepare("SELECT * FROM user WHERE groupid != 1 $query ORDER BY id DESC");
+                $statement->execute();
+                $rows = $statement->fetchAll();
+
+                if (!empty($rows)){
+					foreach ($rows as $row) 
+?>
+<section>
 <header>
 		<div class="container">
 			<div class="row">
@@ -29,7 +43,7 @@
                                     <div class="dropdown-divider"></div>
 									<a class="dropdown-item" href="#">Browse Seller</a>
 									<div class="dropdown-divider"></div>
-									<a class="dropdown-item" href="#">Browse Jobs</a>
+									<a class="dropdown-item" href="browse.php">Browse Jobs</a>
 									</div>
 								</li>
 								<li class="nav-item">
@@ -41,7 +55,7 @@
 									<img class="rounded-circle" src="layout/image/dp.jpg" alt="" width="40">
 									</a>
 									<div class="dropdown-menu profile-dropdown-menu" aria-labelledby="navbarDropdown">
-									<a class="dropdown-item" href="#">Edit profile</a>
+									<a class="dropdown-item" href="<?php echo"members.php?do=Edit&id=" . $row['id'];} ?>">Edit profile</a>
 									<a class="dropdown-item" href="post.php">Post Job</a>
 									<a class="dropdown-item" href="#">Workstream</a>
 									<a class="dropdown-item" href="#">Freelancing Activity</a>
@@ -60,3 +74,4 @@
 			</div>
 		</div>
 	</header>
+	</section>

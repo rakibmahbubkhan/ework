@@ -1,15 +1,13 @@
 <?php
-include_once 'template/header.php';
-$noNavbar = '';
-$pageTitle = 'Login';
+ob_start();
 session_start();
-
+include_once 'template/header.php';
 
 if (isset($_SESSION['username'])) {
 	header('location:dashboard.php');
 }
 
-include 'connect.php';
+include 'admin/connect.php';
 
 //check if user coming from HTTP request
 
@@ -20,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	//echo "<h3>Hello ".$username." "."Your Password Is '".$hasshedpass."'</h3>" ;
 
-	$statement = $con -> prepare("SELECT id, username, password FROM user WHERE username = ? AND password = ? AND groupid = 0 LIMIT 1");
+	$statement = $con -> prepare("SELECT id, username, password FROM user WHERE username = ? AND password = ?");
 	$statement -> execute(array($username,$hasshedpass));
     $row = $statement -> fetch();
 	$count = $statement -> rowCount();
@@ -75,4 +73,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <?php
 include_once 'template/footer.php';
+ob_end_flush();
 ?>

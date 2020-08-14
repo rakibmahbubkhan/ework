@@ -18,9 +18,9 @@
 						<div class="collapse navbar-collapse" id="navbarCollapse">
 							<ul class="navbar-nav ml-auto">
 								<li class="nav-item ">
-									<a class="nav-link btn green-white-btn" href="post.php">Post a Job</a>
+									<a class="nav-link btn green-white-btn" href="posts.php">Posts</a>
 								</li>
-                                <li class="nav-item dropdown">
+                                <!-- <li class="nav-item dropdown">
 									<a class="nav-link dropdown-toggle btn white-border" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									<i class="fas fa-search"></i> Search
 									</a>
@@ -31,7 +31,7 @@
 									<div class="dropdown-divider"></div>
 									<a class="dropdown-item" href="#">Browse Jobs</a>
 									</div>
-								</li>
+								</li> -->
 								<li class="nav-item">
 									<a class="nav-link icons" href="#two" title="Workstream"><i class="far fa-envelope"></i></a>
 								</li>
@@ -43,6 +43,7 @@
 									<div class="dropdown-menu profile-dropdown-menu" aria-labelledby="navbarDropdown">
 									<a class="dropdown-item" href="members.php?do=Edit&id=<?php echo $_SESSION['ID']; ?>">Edit profile</a>
 									<a class="dropdown-item" href="members.php?do=Manage">Manage Member</a>
+									<a class="dropdown-item" href="members.php?do=Add">Add A Member</a>
 									<a class="dropdown-item" href="#">Workstream</a>
 									<a class="dropdown-item" href="#">Freelancing Activity</a>
                                     <a class="dropdown-item" href="#">Buyer Activity</a>

@@ -1,4 +1,5 @@
 <?php
+include_once 'template/header.php';
 $noNavbar = '';
 $pageTitle = 'Login';
 session_start();
@@ -8,7 +9,7 @@ if (isset($_SESSION['username'])) {
 	header('location:dashboard.php');
 }
 
-include 'init.php';
+include 'connect.php';
 
 //check if user coming from HTTP request
 

@@ -49,7 +49,7 @@
 					                            foreach ($rows as $row) {
 					                                echo "<tr>";
 					                                    echo "<td>" . $row['id'] . "</td>";
-					                                    echo "<td><img src='uploads/avater/" . $row['avater'] . "' alt='' class='avater-img'/></td>";
+					                                    echo "<td><img src='uploads/avater/" . $row['avater'] . "' alt='' width='40' class='avater-img'/></td>";
 					                                    echo "<td>" . $row['username'] . "</td>";
 					                                    echo "<td>" . $row['email'] . "</td>";
 					                                    echo "<td>" . $row['fullname'] . "</td>";
@@ -186,7 +186,7 @@
 
 	                    // Get Avater Extension 
 
-	                    $avaterExtension = strtolower(end (explode ('.', $avaterName)));
+	                    $avaterExtension = strtolower(end(explode ('.', $avaterName)));
 
 	                    // Get Variables from the Form
 
@@ -238,7 +238,7 @@
 
 	                        
 	                        // Check Userinfo Exist In Database
-	                        $check = checkItem( "username", "admin", $user );
+	                        $check = checkItem( "username", "user", $user );
 
 	                        if ($check == 1 ){
 
@@ -248,7 +248,7 @@
 	                        }else{
 
 	                            // Insert New Member's Info Into The Database
-	                            $statement = $con->prepare("INSERT INTO admin(username, password, email, fullname, regstatus, Date, avater) VALUES(:zuser, :zpass, :zemail, :zname, 0, now(), :zavater) ");
+	                            $statement = $con->prepare("INSERT INTO user(username, password, email, fullname, regstatus, Date, avater) VALUES(:zuser, :zpass, :zemail, :zname, 0, now(), :zavater) ");
 
 	                            $statement->execute(array(
 	                                'zuser'     => $user, 
@@ -283,7 +283,7 @@
 	            // Check if the get request is Numeric & Get the Integer Value of It
 	            $id = isset($_GET['id']) && is_numeric($_GET['id']) ? intval($_GET['id']) : 0;
 	            // Select All Data Depend On This ID
-	            $statement = $con -> prepare("SELECT * FROM admin WHERE id = ? LIMIT 1");
+	            $statement = $con -> prepare("SELECT * FROM user WHERE id = ? LIMIT 1");
 	            // Execute Query
 	            $statement -> execute(array($id));
 	            // Fetch The Data
@@ -396,7 +396,7 @@
 	                        $statement2 = $con->prepare("SELECT 
 	                                                    * 
 	                                                FROM 
-														admin 
+														user 
 	                                                WHERE 
 	                                                    username = ? 
 	                                                AND 
@@ -413,7 +413,7 @@
 	                        }
 	                        else{
 	                            // Update The Database
-	                            $statement = $con-> prepare("UPDATE admin SET username = ?, password = ?, email = ?, fullname = ? WHERE id = ?");
+	                            $statement = $con-> prepare("UPDATE user SET username = ?, password = ?, email = ?, fullname = ? WHERE id = ?");
 	                            $statement->execute(array($user, $pass, $email, $fullname, $id));
 	                            // Echo Success Message
 	                            $theMsg = "<div class='alert alert-success'>" . $statement->rowCount() . ' Record Updated</div>';
@@ -438,11 +438,11 @@
 	                // Delete User with all information
 	                $id = isset($_GET['id']) && is_numeric($_GET['id']) ? intval($_GET['id']) : 0;
 	                    // Select All Data Depend On This ID
-	                    $check = checkItem ('id', 'admin', $id);
+	                    $check = checkItem ('id', 'user', $id);
 	                    
 	                    if ( $check > 0){ 
 
-	                        $statement = $con->prepare("DELETE FROM admin WHERE id = :zuser");
+	                        $statement = $con->prepare("DELETE FROM user WHERE id = :zuser");
 
 	                        $statement-> bindParam(":zuser", $id);
 
@@ -467,11 +467,11 @@
 	                // Delete User with all information
 	                $id = isset($_GET['id']) && is_numeric($_GET['id']) ? intval($_GET['id']) : 0;
 	                    // Select All Data Depend On This ID
-	                    $check = checkItem ('id', 'admin', $id);
+	                    $check = checkItem ('id', 'user', $id);
 	                    
 	                    if ( $check > 0){ 
 
-	                        $statement = $con->prepare("UPDATE admin SET regstatus = 1 WHERE id = ?");
+	                        $statement = $con->prepare("UPDATE user SET regstatus = 1 WHERE id = ?");
 
 	                        $statement->execute(array($id));
 

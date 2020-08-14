@@ -55,7 +55,7 @@ echo "inserted successfully..!";
                         <input type="email" name="email" class="form-control" placeholder="Your Email *" value="" />
                     </div>
                     <div class="form-group">
-                        <input type="text" name="phone" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" value="" />
+                        <input type="text" name="phone" minlength="11" maxlength="15" class="form-control" placeholder="Your Phone *" value="" />
                     </div>
                     <div class="form-group">
                         <input type="password" class="form-control"  placeholder="Confirm Password *" value="" />

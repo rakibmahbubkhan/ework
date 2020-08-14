@@ -81,7 +81,7 @@ li{
 }
 
 .top-section{
-    padding-top: 2%;
+    padding-top: 5%;
 }
 .section{
     padding-top: 20px;
@@ -409,3 +409,13 @@ q {
     font-weight: 500;
 }
 /* Admin Login Page End */
+
+
+
+.post-pad{
+    padding: 3%;
+}
+
+.post-pad:hover{
+    background-color: rgb(241, 236, 226);
+}

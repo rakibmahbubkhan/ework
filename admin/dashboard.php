@@ -6,7 +6,7 @@ if (isset($_SESSION['username'])) {
 	include 'init.php';
 
 	$numUser =5;
-	$latestUser = getLatest('*','admin','id', $numUser);
+	$latestUser = getLatest('*','user','id', $numUser);
 	?>
 
 
@@ -20,7 +20,7 @@ if (isset($_SESSION['username'])) {
 					<i class="fa fa-users fa-3x"></i>
 					<div class="info">
 						Total Members
-						<span><a href="members.php"><?php echo countItems('id', 'admin'); ?></a></span>
+						<span><a href="members.php"><?php echo countItems('id', 'user'); ?></a></span>
 					</div>
 				</div>
 			</div>
@@ -32,7 +32,7 @@ if (isset($_SESSION['username'])) {
 					<div>
 						Pending Members
 						<span><a href="members.php?do=Manage&page=Pending">
-							<?php echo checkItem("regstatus", "admin", 0); ?>
+							<?php echo checkItem("regstatus", "user", 0); ?>
 						</a></span>
 					</div>
 				</div>
@@ -56,9 +56,9 @@ if (isset($_SESSION['username'])) {
 					<i class="fa fa-comment fa-3x"></i>
 					<div>
 						Total Posts
-						<span>
-							<a href="">1.5k</a>
-						</span>
+						
+						<span><a href="members.php"><?php echo countItems('id', 'jobs'); ?></a></span>
+						
 					</div>
 				</div>
 			</div>
@@ -83,9 +83,9 @@ if (isset($_SESSION['username'])) {
 							if (!empty($latestUser)) {
 
 								foreach ($latestUser as $user) {
-								echo "<li>".$user['fullname']."<span class='pull-right'><a href='members.php?do=Edit&id=" . $user['id'] ."' class='btn btn-success'><i class='fa fa-edit'></i> Edit</a>";
+								echo "<li><div class='row'><div class='col-lg-6'>".$user['fullname']."</div><div class='col-lg-6' align='right'><span><a href='members.php?do=Edit&id=" . $user['id'] ."' class='btn btn-success'><i class='fa fa-edit'></i> Edit</a>";
 										if($user['regstatus'] == 0){
-								echo"<a href='members.php?do=Activate&id=" . $user['id'] ."' class='btn btn-info confirm'><i class='fa fa-check'></i>  Activate</a></span></li>";
+								echo"<a href='members.php?do=Activate&id=" . $user['id'] ."' class='btn btn-info confirm'><i class='fa fa-check'></i>  Activate</a></span></div></div></li>";
 
                                         }
                                  }
